@@ -23,8 +23,12 @@ async def start(message: Message):
 
 
 @dp.message()
-async def handle_forward_command(message: Message):
-    await message.bot.send_message(chat_id=-4569283112, text='yay')
+async def forwarder(message: Message):
+    forwarding_text = (message.message_id)
+    from_chat_id = message.chat.id
+    chat_id = -4569283112
+    await bot.forward_message(chat_id = chat_id, from_chat_id = from_chat_id , message_id =  forwarding_text)
+    
 
 
 
