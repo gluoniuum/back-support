@@ -36,7 +36,6 @@ async def replayer(message: Message):
         chat_id = 6805483829
         from_chat_id = -4569283112
         forwarding_text = int(message.message_id)
-        await message.answer(f'yay_ {chat_id}')
         await bot.forward_message(chat_id = chat_id, from_chat_id = from_chat_id , message_id =  forwarding_text)
     # await bot.send_message(chat_id = user_id, text =  forwarding_text.text )
     else:
@@ -44,11 +43,9 @@ async def replayer(message: Message):
 
 @dp.message()
 async def forwarder(message: Message):
-    forwarding_text = (message.message_id)
-    from_chat_id = message.chat.id
-    print (from_chat_id)
-
-    chat_id = -1002389099327
+    forwarding_text = message.message_id
+    from_chat_id = 6805483829
+    chat_id = 6805483829
     print('yay2')
     await bot.forward_message(chat_id = chat_id, from_chat_id = from_chat_id , message_id =  forwarding_text)
     print(forwarding_text)
